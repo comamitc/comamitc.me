@@ -34,7 +34,6 @@ grunt.initConfig({
 // load tasks from npm
 grunt.loadNpmTasks('grunt-contrib-less');
 grunt.loadNpmTasks('grunt-contrib-watch');
-grunt.loadNpmTasks('grunt-injector');
 
 grunt.registerTask('default', ['watch']);
 // end module.exports
