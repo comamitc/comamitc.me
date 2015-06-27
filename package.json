@@ -1,0 +1,13 @@
+{
+  "name": "comamitc.me",
+  "version": "1.0.0",
+  "description": "personal webpage",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/comamitc/comamitc.me.git"
+  },
+  "author": "Mitch Comardo",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/comamitc/comamitc.me#readme"
+}
