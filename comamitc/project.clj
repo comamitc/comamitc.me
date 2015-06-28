@@ -19,8 +19,8 @@
               :source-paths ["src"]
               :compiler {
                 :main comamitc.core
-                :output-to "out/comamitc.js"
-                :output-dir "out"
+                :output-to "../public/js/comamitc.js"
+                :output-dir "../public/js"
                 :optimizations :none
                 :cache-analysis true
                 :source-map true}}
@@ -28,7 +28,7 @@
               :source-paths ["src"]
               :compiler {
                 :main comamitc.core
-                :output-to "out-adv/comamitc.min.js"
-                :output-dir "out-adv"
+                :output-to "../public/js/comamitc.min.js"
+                :output-dir "../public/js"
                 :optimizations :advanced
                 :pretty-print false}}]})
