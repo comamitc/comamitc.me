@@ -1,8 +1,7 @@
 (ns comamitc.core
-  (:require [clojure.browser.repl :as repl]))
-
-;; (repl/connect "http://localhost:9000/repl")
+  (:require
+    [comamitc.router :as router]))
 
 (enable-console-print!)
 
-(println "Hello world!")
+(router/init)

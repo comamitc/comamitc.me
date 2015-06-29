@@ -2,8 +2,10 @@
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2755"]]
+  :dependencies [[org.clojure/clojure "1.7.0-RC1"]
+                 [org.clojure/clojurescript "0.0-3308"]
+                 [reagent "0.5.0"]
+                 [secretary "1.2.3"]]
 
   :node-dependencies [[source-map-support "0.2.8"]]
 
@@ -12,23 +14,20 @@
 
   :source-paths ["src" "target/classes"]
 
-  :clean-targets ["out" "out-adv"]
+  :clean-targets ^{:protect false} ["../public/js/comamitc.js" 
+                                    "../public/js/comamitc.min.js"
+                                    "target"]
 
   :cljsbuild {
     :builds [{:id "dev"
               :source-paths ["src"]
               :compiler {
-                :main comamitc.core
                 :output-to "../public/js/comamitc.js"
-                :output-dir "../public/js"
-                :optimizations :none
-                :cache-analysis true
-                :source-map true}}
+                :optimizations :whitespace
+                :pretty-print true}}
              {:id "release"
               :source-paths ["src"]
               :compiler {
-                :main comamitc.core
                 :output-to "../public/js/comamitc.min.js"
-                :output-dir "../public/js"
                 :optimizations :advanced
                 :pretty-print false}}]})

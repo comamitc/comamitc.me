@@ -1,0 +1,21 @@
+(ns comamitc.router
+  (:require
+      [goog.events :as events]
+      [goog.history.EventType :as EventType]
+      [secretary.core :as secretary :refer-macros [defroute]]
+      [comamitc.utils :as utils]
+      [comamitc.html.dispatcher :as dispatcher])
+  (:import goog.History))
+
+(secretary/set-config! :prefix "#")
+
+(defroute "/" []
+  (dispatcher/run))
+
+(defroute "*" []
+  (utils/log "this page does not exist"))
+
+(defn init []
+  (let [h (History.)]
+    (goog.events/listen h EventType/NAVIGATE #(secretary/dispatch! (.-token %)))
+    (doto h (.setEnabled true))))
