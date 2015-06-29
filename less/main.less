@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 // Fonts
 //------------------------------------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 @font-face {
   font-family: 'Open Sans Light';
   font-style: normal;
@@ -74,3 +75,70 @@
   font-style: normal;
   font-weight: 400;
 }
+
+.font-hell(@size, @weight) {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: @size;
+  font-weight: @weight;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//------------------------------------------------------------------------------
+// Body Styling
+//------------------------------------------------------------------------------
+body {
+  .font-normal(18px);
+}
+
+.wrapper-a0def {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-7f1e8 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .clearfix();
+}
+
+.header-left-363bb {
+  float: left;
+  text-decoration: none;
+}
+
+.header-logo-5bacd {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+}
+
+.header-title-947c2 {
+  display: inline;
+  padding-left: 15px;
+  padding-right: 10px;
+  height: 100%;
+  text-transform: uppercase;
+  //.font-normal(32px);
+  .font-hell(32px, 700);
+  color: #555;
+}
+
+.header-right-591aa {
+  float: right;
+  text-align: bottom;
+}
+
+
+
