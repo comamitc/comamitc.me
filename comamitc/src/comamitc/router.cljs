@@ -4,13 +4,13 @@
       [goog.history.EventType :as EventType]
       [secretary.core :as secretary :refer-macros [defroute]]
       [comamitc.utils :as utils]
-      [comamitc.html.dispatcher :as dispatcher])
+      [comamitc.html.core :as html])
   (:import goog.History))
 
 (secretary/set-config! :prefix "#")
 
 (defroute "/" []
-  (dispatcher/run))
+  (html/render))
 
 (defroute "*" []
   (utils/log "this page does not exist"))
