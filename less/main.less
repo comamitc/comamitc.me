@@ -7,6 +7,7 @@
 //------------------------------------------------------------------------------
 // Fonts
 //------------------------------------------------------------------------------
+@import url(http://fonts.googleapis.com/css?family=Raleway);
 @font-face {
   font-family: 'Open Sans Light';
   font-style: normal;
@@ -74,3 +75,117 @@
   font-style: normal;
   font-weight: 400;
 }
+
+.font-hell(@size, @weight) {
+  font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: @size;
+  font-weight: @weight;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//------------------------------------------------------------------------------
+// Body Styling
+//------------------------------------------------------------------------------
+body {
+  .font-normal(18px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper-a0def {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-7f1e8 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  .clearfix();
+}
+
+
+// offset header
+.header-left-363bb {
+  float: left;
+}
+
+.header-logo-5bacd {
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+}
+
+.header-title-947c2 {
+  display: inline;
+  padding-left: 15px;
+  padding-right: 10px;
+  height: 100%;
+  text-transform: uppercase;
+  //.font-normal(32px);
+  .font-hell(1.5em, 700);
+  color: #555;
+}
+
+.header-right-591aa {
+  float: right;
+  padding-top: 20px;
+  .clearfix();
+}
+
+// inline list header
+.inline-list-b9fea {
+  display: inline-block;
+  width: 33%;
+}
+
+.header-title-318a9 {
+  text-align: left;
+  text-transform: uppercase;
+  .font-hell(1.5em, 700);
+  color: #555;
+}
+
+.header-logo-318a9 {
+  text-align: center;
+}
+
+.header-link-318a9 {
+  text-align: right;
+}
+
+// navigation list
+.nav-list-5ebc1 {
+  text-align: bottom;
+}
+
+.nav-link-2c23a {
+  display: inline;
+  text-align: center;
+  text-transform: uppercase;
+  .font-hell(16px, 700);
+  color: #999;
+  margin: 0px 20px;
+
+  &:hover {
+    color: #ff5d5d;
+    border-bottom: 2px solid #555;
+  }
+}
+
+
+
