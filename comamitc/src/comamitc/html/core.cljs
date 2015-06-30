@@ -8,7 +8,7 @@
   [:div#bodyContent.wrapper-a0def 
     [:div.home-content-6ff4e 
       [:div "Howdy!"] 
-      [:div "I am a passionate engineer and leader experienced designing, developing, & deploying fully cloud based applications."]]])
+      [:div "I am a passionate engineer and leader experienced in designing, developing, & deploying fully cloud based applications."]]])
 
 (def body-map
   {:default home-content})
