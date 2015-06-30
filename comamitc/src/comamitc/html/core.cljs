@@ -8,7 +8,11 @@
   [:div#bodyContent.wrapper-a0def 
     [:div.home-content-6ff4e 
       [:div "Howdy!"] 
-      [:div "I am a passionate engineer and leader experienced in designing, developing, & deploying fully cloud based applications."]]])
+      [:div.home-greet-a199e 
+        (str "I am a passionate Full-Stack Engineer and leader experienced in designing," 
+             " developing & deploying fully cloud-based applications.")]
+      [:div.location-a36e7 
+        [:i.fa.fa-map-marker.marker-cd4ad] [:span.city-07ffa "Houston, TX"]]]])
 
 (def body-map
   {:default home-content})
@@ -47,17 +51,6 @@
           [:a {:href "http://linkedin.com/in/mitchcomardo"} [:i.fa.fa-linkedin]]]
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]]])
-
-; (defn nav-bar-2 []
-;   [:header#navBar.wrapper-a0def.header-7f1e8 
-;     [:ul
-;       [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
-;       [:li.inline-list-b9fea.header-logo-318a9 
-;         [:img {:src "images/texas-sil.png"
-;                :alt "MFC"
-;                :height "40px"}]]
-;       [:li.inline-list-b9fea.header-link-318a9 
-;         (nav-list)]]])
 
 (defn app [opts]
   [:div.body-c83c6
