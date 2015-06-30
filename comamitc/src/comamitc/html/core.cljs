@@ -4,13 +4,14 @@
     [comamitc.utils :as utils]
     [reagent.core :as reagent :refer [atom]]))
 
-
-
-(defn body-content [opts]
-  [:div#bodyContent.wrapper-a0def "body"])
+(defn home-content []
+  [:div#bodyContent.wrapper-a0def 
+    [:div.home-content-6ff4e 
+      [:div "Howdy!"] 
+      [:div "I am a passionate engineer and leader experienced designing, developing, & deploying fully cloud based applications."]]])
 
 (def body-map
-  {:default body-content})
+  {:default home-content})
 
 (defn nav-list []
   [:ul
@@ -44,9 +45,8 @@
           [:a {:href "http://twitter.com/comamitc"} [:i.fa.fa-twitter]]]
         [:li.footer-link-b3f79 
           [:a {:href "http://linkedin.com/in/mitchcomardo"} [:i.fa.fa-linkedin]]]
-        [:li.footer-link-b3f79 [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]
-
-        ]]])
+        [:li.footer-link-b3f79 
+          [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]]])
 
 ; (defn nav-bar-2 []
 ;   [:header#navBar.wrapper-a0def.header-7f1e8 
@@ -62,7 +62,7 @@
 (defn app [opts]
   [:div.body-c83c6
     (nav-bar)
-    (body-content opts)
+    (opts)
     (footer)])
 
 (defn ^:export render [alt]
