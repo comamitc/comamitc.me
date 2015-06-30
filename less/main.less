@@ -93,11 +93,14 @@
   }
 }
 
+@bg: #ddd;
+
 //------------------------------------------------------------------------------
 // Body Styling
 //------------------------------------------------------------------------------
 body {
   .font-normal(18px);
+  background-color: @bg;
 }
 
 a {
@@ -105,6 +108,9 @@ a {
   color: inherit;
 }
 
+.body-c83c6 {
+  background-color: #fff;
+}
 .wrapper-a0def {
   max-width: 1200px;
   width: 90%;
@@ -147,6 +153,12 @@ a {
   .clearfix();
 }
 
+.title-tld-b65ee {
+  .font-normal(1em);
+  text-transform: lowercase;
+  color: #777;
+}
+
 // inline list header
 .inline-list-b9fea {
   display: inline-block;
@@ -183,9 +195,30 @@ a {
 
   &:hover {
     color: #ff5d5d;
-    border-bottom: 2px solid #555;
+    border-bottom: 2px solid #999;
   }
 }
 
+.active-link-8157d {
+   color: darken(#ff5d5d, 10%);
+   border-bottom: 2px solid #777;
+}
+
+.bottom-c3612 {
+  float: bottom;
+  margin-top: 40px;
+  background-color: @bg;
+}
+
+.footer-center-b2a7f {
+  color: #555;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.footer-link-b3f79 {
+  display: inline-block;
+  padding: 0 10px;
+}
 
 

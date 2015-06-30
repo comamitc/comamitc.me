@@ -10,7 +10,7 @@
 (secretary/set-config! :prefix "#")
 
 (defroute "/" []
-  (html/render :one))
+  (html/render :default))
 
 (defroute "*" []
   (utils/log "this page does not exist"))
