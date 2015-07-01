@@ -32,10 +32,10 @@
   [:ul
     [:li.nav-link-2c23a (when (= alt :about) {:class "active-link-8157d"})
       [:a {:href "#/about"} "about me"]]
-    [:li.nav-link-2c23a (when (= alt :resume) {:class "active-link-8157d"})
-      [:a {:href "#/resume"} "resume"]]
     [:li.nav-link-2c23a (when (= alt :portfolio) {:class "active-link-8157d"})
-      [:a {:href "#/portfolio"} "portfolio"]]])
+      [:a {:href "#/portfolio"} "portfolio"]]
+    [:li.nav-link-2c23a (when (= alt :resume) {:class "active-link-8157d"})
+      [:a {:href "#/resume"} "resume"]]])
 
 (defn nav-bar [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
