@@ -100,19 +100,21 @@
   }
 }
 
-
-@bg: #ddd;
 @timeline-border-color: #ccc;
-@bright-red: #ff5d5d;
-@light-red: lighten(#ff5d5d, 10%);
+
+@red-primary: #ff5d5d;
+@red-secondary: lighten(#ff5d5d, 10%);
+@black-primary: #444;
+@black-secondary: #777;
+@grey-primary: #aaa;
+@grey-secondary: #ddd;
 
 //------------------------------------------------------------------------------
 // Body Styling
 //------------------------------------------------------------------------------
 body {
   .font-normal(18px);
-
-  background-color: @bg;
+  background-color: @grey-secondary;
   min-width: 450px;
 }
 
@@ -155,9 +157,8 @@ a {
   padding-right: 10px;
   height: 100%;
   text-transform: uppercase;
-  //.font-normal(32px);
   .font-hell(1.5em, 700);
-  color: #555;
+  color: @black-primary;
 }
 
 .header-right-591aa {
@@ -169,7 +170,7 @@ a {
 .title-tld-b65ee {
   .font-normal(1em);
   text-transform: lowercase;
-  color: #777;
+  color: @black-secondary;
 }
 
 // inline list header
@@ -182,7 +183,7 @@ a {
   text-align: left;
   text-transform: uppercase;
   .font-hell(1.5em, 700);
-  color: #555;
+  color: @black-primary;
 }
 
 .header-logo-318a9 {
@@ -203,13 +204,13 @@ a {
   text-align: center;
   text-transform: uppercase;
   .font-hell(16px, 700);
-  color: #999;
+  color: @grey-primary;
   margin: 0px 20px;
   padding-bottom: 5px;
 
   &:hover {
-    color: @light-red;
-    border-bottom: 2px solid #999;
+    color: @red-secondary;
+    border-bottom: 2px solid @grey-primary;
   }
 }
 
@@ -218,21 +219,21 @@ a {
   text-align: center;
   text-transform: uppercase;
   .font-hell(16px, 700);
-  color: #999;
+  color: @grey-primary;
   margin: 0px 20px;
   padding-bottom: 5px;
-  color: @bright-red;
-  border-bottom: 2px solid #777;
+  color: @red-primary;
+  border-bottom: 2px solid @black-secondary;
 }
 
 .bottom-c3612 {
   float: bottom;
   margin-top: 60px;
-  background-color: @bg;
+  background-color: @grey-secondary;
 }
 
 .footer-center-b2a7f {
-  color: #555;
+  color: @black-secondary;
   text-align: center;
   padding: 40px 0;
 }
@@ -242,7 +243,7 @@ a {
   padding: 0 20px;
 
   &:hover {
-    color: #333;
+    color: @black-primary;
   }
 
 }
@@ -250,7 +251,7 @@ a {
 .home-content-6ff4e {
   .font-hell(3.5em, 700);
   text-align: center;
-  color: #444;
+  color: @black-primary;
   width: 75%;
   margin: 0 auto;
   padding: 40px 0;
@@ -258,7 +259,7 @@ a {
 
 .home-greet-a199e {
   margin-top: 30px;
-  color: #777;
+  color: @black-secondary;
   font-size: 0.8em;
   line-height: 1.4em;
 }
@@ -268,16 +269,124 @@ a {
 }
 
 .city-07ffa {
-  color: @light-red;
+  color: @red-secondary;
 }
 
 .location-a36e7 {
   margin-top: 50px;
-  color: #555;
+  color: @black-primary;
   font-size: 0.7em;
   line-height: 1.4em;
 }
 
+
+.disclaimer-d553a  {
+  padding: 20px 0 20px 0;
+}
+
+.license-5cb15 {
+  font-size: 12px;
+  float: left;
+}
+
+.lic-link-5b3f9 {
+  color: @red-primary;
+}
+
+.profile-e619f {
+  margin-top: 40px;
+  .clearfix();
+}
+
+.profile-left-44dfc {
+  float: left;
+  width: 32%;
+  position: relative;
+}
+
+.profile-right-717af {
+  float: right;
+  text-align: left;
+  width: 63%;
+}
+
+.profile-pic-8ab09 {
+  width: 80%;
+}
+
+.about-title-771d6 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: @black-primary;
+}
+
+.about-content-80f15 {
+  color: @black-primary;
+  .font-light(1.2em);
+  line-height: 1.7em;
+}
+
+.generic-link-20b6e {
+  color: #333;
+  font-weight: 700;
+  border-bottom: 1px solid @black-secondary;
+}
+
+.edu-f0232, .exp-d625a, .skills-1c9f7{
+  margin-top: 70px;
+}
+
+.prof-title-2f701 {
+  .font-hell(1.2em, 700);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid @grey-secondary;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.space-right {
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.uni-6c2bd, .dates-053aa, .degree-c86ab {
+  line-height: 1.5em;
+}
+
+.uni-6c2bd {
+  .font-normal(1em);
+}
+
+.dates-053aa, .degree-c86ab {
+  .font-light(0.9em);
+  color: @black-secondary;
+}
+
+.job-b1d10 {
+  margin-bottom: 40px;
+}
+
+.job-desc-ee279 {
+  color: @black-secondary;
+  .font-light(0.9em);
+  line-height: 1.7em;
+}
+
+.co-name-6be4f {
+  line-height: 1.7em;
+  color: @black-secondary;
+}
+
+.job-date-06fc3 {
+  float: right;
+  color: @grey-secondary;
+  .font-light(0.8em);
+  line-height: 1.7em;
+}
+
+// DEAD CSS
 .timeline-f87c7  {
   position: relative;
   padding: 3em 0 2em 0;
@@ -307,7 +416,7 @@ a {
 }
 
 .timeline-img-9cc5f {
-  background: @light-red;
+  background: @red-secondary;
   position: absolute;
   top: 0;
   border-radius: 50%;
@@ -404,7 +513,7 @@ a {
   width: 100%;
   left: 140%;
   top: 6px;
-  color: #777;
+  color: @black-secondary;
   font-size: 0.8em;
   font-weight: 700;
 }
@@ -418,7 +527,7 @@ a {
   padding-top: 10px;
   font-size: 0.8em;
   line-height: 1.75em;
-  color: #777;
+  color: @black-secondary;
 }
 
 .job-title-720f9 {
@@ -426,110 +535,4 @@ a {
   font-weight: 500;
   font-size: 0.8em;
   .clearfix();
-}
-
-.disclaimer-d553a  {
-  padding: 20px 0 20px 0;
-}
-
-.license-5cb15 {
-  font-size: 12px;
-  float: left;
-}
-
-.lic-link-5b3f9 {
-  color: @bright-red;
-}
-
-.profile-e619f {
-  margin-top: 40px;
-  .clearfix();
-}
-
-.profile-left-44dfc {
-  float: left;
-  width: 32%;
-  position: relative;
-}
-
-.profile-right-717af {
-  float: right;
-  text-align: left;
-  width: 63%;
-}
-
-.profile-pic-8ab09 {
-  width: 80%;
-}
-
-.about-title-771d6 {
-  text-transform: uppercase;
-  font-size: 1.5em;
-  font-weight: 500;
-  color: #333;
-}
-
-.about-content-80f15 {
-  color: #555;
-  .font-light(1.2em);
-  line-height: 1.7em;
-}
-
-.generic-link-20b6e {
-  color: #333;
-  font-weight: 700;
-  border-bottom: 1px solid #777;
-}
-
-.edu-f0232, .exp-d625a, .skills-1c9f7{
-  margin-top: 70px;
-}
-
-.prof-title-2f701 {
-  .font-hell(1.2em, 700);
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 20px;
-  letter-spacing: 2px;
-}
-
-.space-right {
-  display: inline-block;
-  padding-right: 20px;
-}
-
-.uni-6c2bd, .dates-053aa, .degree-c86ab {
-  line-height: 1.5em;
-}
-
-.uni-6c2bd {
-  .font-normal(1em);
-}
-
-.dates-053aa, .degree-c86ab {
-  .font-light(0.9em);
-  color: #777;
-}
-
-.job-b1d10 {
-  margin-bottom: 40px;
-}
-
-.job-desc-ee279 {
-  color: #555;
-  .font-light(0.9em);
-  line-height: 1.7em;
-}
-
-.co-name-6be4f {
-  line-height: 1.7em;
-  color: #777;
-}
-
-.job-date-06fc3 {
-  float: right;
-  color: #bbb;
-  .font-light(0.8em);
-  line-height: 1.7em;
 }
