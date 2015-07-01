@@ -89,6 +89,7 @@
     ((get body-map alt))
     (footer)])
 
+;; TODO: replace reagent with just hiccups
 (defn ^:export render [alt]
   (reagent/render [app alt]
                   (.-body js/document)))
