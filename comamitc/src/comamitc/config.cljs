@@ -12,7 +12,8 @@
               :link "http://pros.com"
               :job-title "Sr. Software Engineer"
               :job-desc ["Sr. Engineer for enterprise wide tools and automation technology aimed to drive down operating costs and increase the Organization's ability to scale."
-                         "Acted as the central point of technical communication and manager for the offshore and in-house development teams."]}
+                         "Acted as the central point of technical communication and manager for the offshore and in-house development teams."
+                         "Winner of 2014 Innovation Cell Program - Developed a predictive scoring web application enabling the sales force by prioritizing sales actionables."]}
              {:id 3
               :span "Dec 2010 - Sept 2012"
               :company "Wipro"
