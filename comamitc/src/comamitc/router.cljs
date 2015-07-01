@@ -12,6 +12,9 @@
 (defroute "/" []
   (html/render :default))
 
+(defroute "/resume" []
+  (html/render :resume))
+
 (defroute "*" []
   (utils/log "this page does not exist"))
 

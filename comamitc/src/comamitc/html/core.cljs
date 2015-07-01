@@ -2,6 +2,7 @@
   (:require 
     [comamitc.dom :as dom]
     [comamitc.utils :as utils]
+    [comamitc.config :refer [career]]
     [reagent.core :as reagent :refer [atom]]))
 
 (defn home-content []
@@ -14,8 +15,20 @@
       [:div.location-a36e7 
         [:i.fa.fa-map-marker.marker-cd4ad] [:span.city-07ffa "Houston, TX"]]]])
 
+(defn resume-content []
+  [:div#bodyContent.wrapper-a0def 
+      [:div.timeline-f87c7 
+        (for [job career] ;; TODO: make sure career is sorted
+          [:div.timeline-block-2024c
+          [:div.timeline-img-9cc5f]
+          [:div {:class (if (odd? (:id job)) "timeline-content-b1670" "timeline-content-cd817")}
+            [:div.tl-title-7c942 [:a {:href (:link job)} (:company job)]]
+            [:div.tl-cont-52c3f (:job-desc job)]
+            [:div.tl-date-4d0bc (:span job)]]])]])
+
 (def body-map
-  {:default home-content})
+  {:default home-content
+   :resume  resume-content})
 
 (defn nav-list []
   [:ul
@@ -52,10 +65,10 @@
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]]])
 
-(defn app [opts]
+(defn app [body]
   [:div.body-c83c6
     (nav-bar)
-    (opts)
+    (body)
     (footer)])
 
 (defn ^:export render [alt]
