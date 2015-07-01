@@ -32,7 +32,13 @@
 (hiccups/defhtml experience []
   [:div.exp-d625a 
     [:div.prof-title-2f701 
-      [:i.fa.fa-briefcase.space-right] "Experience"]])
+      [:i.fa.fa-briefcase.space-right] "Experience"]
+    [:div.job-b1d10
+      [:div.job-ttl-4bdc6 
+        [:span.co-name-6be4f ]
+        [:span.job-ttl-dd7a7 ]]
+      [:div.job-desc-ee279 "bar"]
+      [:div.job-date-06fc3 "1/1/1"]]])
 
 (hiccups/defhtml education []
   [:div.edu-f0232
@@ -92,7 +98,7 @@
     [:div.header-right-591aa 
       (nav-list alt)]])
 
-(hiccups/defhtml nav-bar-alt [alt]
+(hiccups/defhtml nav-bar-2 [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
     [:ul
       [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
