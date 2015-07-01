@@ -33,12 +33,13 @@
   [:div.exp-d625a 
     [:div.prof-title-2f701 
       [:i.fa.fa-briefcase.space-right] "Experience"]
-    [:div.job-b1d10
-      [:div.job-ttl-4bdc6 
-        [:span.co-name-6be4f ]
-        [:span.job-ttl-dd7a7 ]]
-      [:div.job-desc-ee279 "bar"]
-      [:div.job-date-06fc3 "1/1/1"]]])
+    (for [job career] ;; TODO: make sure career is sorted
+      [:div.job-b1d10
+        [:div.job-ttl-4bdc6 
+          [:span.job-ttl-dd7a7 (:job-title job)]
+          [:span.job-date-06fc3 (:span job)]]
+        [:div.co-name-6be4f  [:a {:href (:link job)} (:company job)]]
+        [:div.job-desc-ee279 (:job-desc job)]])])
 
 (hiccups/defhtml education []
   [:div.edu-f0232
@@ -59,9 +60,7 @@
   [:div#bodyContent.wrapper-a0def 
       [:div.profile-e619f 
         [:div.profile-left-44dfc
-          [:img.profile-pic-8ab09 {:src "images/mitch-2015.png"}]
-          (education)
-          (skills)]
+          [:img.profile-pic-8ab09 {:src "images/mitch-2015.png"}]]
         [:div.profile-right-717af 
           [:div.profile-about-58d23 
             [:div.about-content-80f15 
@@ -73,7 +72,12 @@
                   (str " where I develop dynamic applications for the web using"
                        " NodeJS, MySQL, JavaScript, CSS3, and HTML5.")]
               [:p (str "When I'm not at my day job, I enjoy traveling around the work with my wife,"
-                       " listening to music, working on side projects and driving my car.")]]]
+                       " listening to music, working on side projects and driving my car.")]]]]]
+      [:div.profile-e619f
+        [:div.profile-left-44dfc
+          (education)
+          (skills)]
+        [:div.profile-right-717af
           (experience)]]])
 
 (hiccups/defhtml project-content []
