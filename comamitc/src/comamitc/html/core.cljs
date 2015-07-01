@@ -72,7 +72,9 @@
         [:li.footer-link-b3f79 
           [:a {:href "http://linkedin.com/in/mitchcomardo"} [:i.fa.fa-linkedin]]]
         [:li.footer-link-b3f79 
-          [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]]])
+          [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]
+      [:div.disclaimer-d553a 
+        [:div.license-5cb15 "comamitc.me is released under the MIT License"]]]])
 
 (def body-map
   {:default home-content
