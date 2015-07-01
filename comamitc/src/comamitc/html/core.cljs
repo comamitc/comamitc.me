@@ -76,7 +76,8 @@
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]
       [:div.disclaimer-d553a 
         ; TODO: replace MIT license URL
-        [:div.license-5cb15 "comamitc.me is released under the" [:a {:href "#"} "MIT License"]]]]]) 
+        [:div.license-5cb15 "comamitc.me is released under the" 
+          [:a.lic-link-5b3f9 {:href "#"} " MIT License"]]]]]) 
 
 (def body-map
   {:default home-content
