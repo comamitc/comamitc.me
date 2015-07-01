@@ -22,24 +22,22 @@
           [:div.timeline-block-2024c
           [:div.timeline-img-9cc5f]
           [:div {:class (if (odd? (:id job)) "timeline-content-b1670" "timeline-content-cd817")}
-            [:div.tl-title-7c942 [:a {:href (:link job)} (:company job)]]
+            [:div.tl-title-7c942 
+              [:a {:href (:link job)} (:company job)] 
+              [:span.job-title-720f9 (:job-title job)]]
             [:div.tl-cont-52c3f (:job-desc job)]
             [:div.tl-date-4d0bc (:span job)]]])]])
 
-(def body-map
-  {:default home-content
-   :resume  resume-content})
-
-(defn nav-list []
+(defn nav-list [alt]
   [:ul
-    [:li.nav-link-2c23a 
+    [:li.nav-link-2c23a (when (= alt :about) {:class "active-link-8157d"})
       [:a {:href "#/about"} "about me"]]
-    [:li.nav-link-2c23a 
+    [:li.nav-link-2c23a (when (= alt :resume) {:class "active-link-8157d"})
       [:a {:href "#/resume"} "resume"]]
-    [:li.nav-link-2c23a 
+    [:li.nav-link-2c23a (when (= alt :portfolio) {:class "active-link-8157d"})
       [:a {:href "#/portfolio"} "portfolio"]]])
 
-(defn nav-bar []
+(defn nav-bar [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
     [:a.header-left-363bb {:href "https://comamitc.me/"}
       [:div.header-logo-5bacd ;"</>"]
@@ -48,7 +46,18 @@
                :height "50px"}]]
       [:div.header-title-947c2  "Mitch Comardo"]]
     [:div.header-right-591aa 
-      (nav-list)]])
+      (nav-list alt)]])
+
+(defn nav-bar-2 [alt]
+  [:header#navBar.wrapper-a0def.header-7f1e8 
+    [:ul
+      [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
+      [:li.inline-list-b9fea.header-logo-318a9 
+        [:img {:src "images/texas-sil.png"
+               :alt "MFC"
+               :height "40px"}]]
+      [:li.inline-list-b9fea.header-link-318a9 
+        (nav-list alt)]]])
 
 (defn footer []
   [:footer.bottom-c3612 
@@ -65,12 +74,21 @@
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]]])
 
-(defn app [body]
+(def body-map
+  {:default home-content
+   :resume  resume-content})
+
+(def nav-map
+  {:default nav-bar
+   :resume  nav-bar-2})
+
+
+(defn app [alt]
   [:div.body-c83c6
-    (nav-bar)
-    (body)
+    ((get nav-map alt) alt)
+    ((get body-map alt))
     (footer)])
 
 (defn ^:export render [alt]
-  (reagent/render [app (get body-map alt)]
+  (reagent/render [app alt]
                   (.-body js/document)))
