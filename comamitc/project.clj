@@ -5,7 +5,8 @@
   :dependencies [[org.clojure/clojure "1.7.0-RC1"]
                  [org.clojure/clojurescript "0.0-3308"]
                  [reagent "0.5.0"]
-                 [secretary "1.2.3"]]
+                 [secretary "1.2.3"]
+                 [hiccups "0.3.0"]]
 
   :node-dependencies [[source-map-support "0.2.8"]]
 
