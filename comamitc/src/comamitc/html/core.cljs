@@ -31,12 +31,13 @@
 
 (hiccups/defhtml nav-list [alt]
   [:ul
-    [:li.nav-link-2c23a (when (= alt :about) {:class "active-link-8157d"})
-      [:a {:href "#/about"} "about me"]]
-    [:li.nav-link-2c23a (when (= alt :portfolio) {:class "active-link-8157d"})
-      [:a {:href "#/portfolio"} "portfolio"]]
-    [:li.nav-link-2c23a (when (= alt :resume) {:class "active-link-8157d"})
-      [:a {:href "#/resume"} "resume"]]])
+    [:li.nav-link-2c23a (when (= alt :profile) {:class "active-link-8157d"})
+      [:a {:href "#/profile"} "profile"]]
+    [:li.nav-link-2c23a (when (= alt :projects) {:class "active-link-8157d"})
+      [:a {:href "#/projects"} "projects"]]
+    ;[:li.nav-link-2c23a (when (= alt :resume) {:class "active-link-8157d"})
+    ;  [:a {:href "#/resume"} "resume"]]
+      ])
 
 (hiccups/defhtml nav-bar [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
@@ -75,17 +76,15 @@
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]
       [:div.disclaimer-d553a 
-        ; TODO: replace MIT license URL
-        [:div.license-5cb15 "comamitc.me is released under the" 
-          [:a.lic-link-5b3f9 {:href "#"} " MIT License"]]]]]) 
+        [:div.license-5cb15 "All Rights Reserverd Mitch Comardo ©"]]]]) 
 
 (def body-map
   {:default home-content
-   :resume  resume-content})
+   :profile  resume-content})
 
 (def nav-map
   {:default nav-bar
-   :resume  nav-bar-2})
+   :profile  nav-bar-2})
 
 
 (hiccups/defhtml app [alt]
