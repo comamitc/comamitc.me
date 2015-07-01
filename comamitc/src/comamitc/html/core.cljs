@@ -3,7 +3,7 @@
   (:require 
     [comamitc.dom :as dom]
     [comamitc.utils :as utils]
-    [comamitc.config :refer [career]]
+    [comamitc.config :refer [career skills]]
     [hiccups.runtime :as hiccupsrt]))
 
 (hiccups/defhtml home-content []
@@ -52,10 +52,12 @@
       [:div.dates-053aa "2005 - 2010"]]])
 
 ;fa-wrench
-(hiccups/defhtml skills []
+(hiccups/defhtml skills-sect []
   [:div.skills-1c9f7 
     [:div.prof-title-2f701 
-      [:i.fa.fa-wrench.space-right] "Skills"]])
+      [:i.fa.fa-wrench.space-right] "Skills"]
+    (for [skill skills]
+      [:div.skill-11c15 skill])])
 
 (hiccups/defhtml profile-content []
   [:div#bodyContent.wrapper-a0def 
@@ -77,7 +79,7 @@
       [:div.profile-e619f
         [:div.profile-left-44dfc
           (education)
-          (skills)]
+          (skills-sect)]
         [:div.profile-right-717af
           (experience)]]])
 

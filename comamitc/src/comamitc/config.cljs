@@ -28,3 +28,17 @@
                              "implementation of Pricing Management software. Developed production "
                              "ready log analysis software that aids in ensuring application "
                              "uptime.")}])
+
+(def skills (sort ["Scala"
+                   "Node.js"
+                   "Python"
+                   "JavaScript"
+                   "HTML5"
+                   "CSS3"
+                   "Clojure"
+                   "ClojureScript"
+                   "Cassandra"
+                   "SQLite"
+                   "Microsoft SQL Server"
+                   "Oracle"
+                   "PostgreSQL"]))
