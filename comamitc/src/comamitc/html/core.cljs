@@ -40,7 +40,9 @@
           [:span.job-ttl-dd7a7 (:job-title job)]
           [:span.job-date-06fc3 (:span job)]]
         [:div.co-name-6be4f  [:a {:href (:link job)} (:company job)]]
-        [:div.job-desc-ee279 (:job-desc job)]])])
+        [:div.job-desc-ee279 
+          [:ul
+            (for [desc (:job-desc job)] [:li desc])]]])])
 
 (hiccups/defhtml education []
   [:div.edu-f0232
@@ -68,7 +70,7 @@
           [:div.profile-about-58d23 
             [:div.about-content-80f15 
               [:p (str "Hi, I'm Mitch.  "
-                       "I'm a full-stack engineer with almost 10 years of experience "
+                       "I'm a full-stack engineer with 7 years of experience "
                        "who enjoys working on simple, intuitive user experiences and efficient "
                        "code. I currently work at ") 
                   [:a.generic-link-20b6e {:href "http://cmn.com"} "CMN"] 
