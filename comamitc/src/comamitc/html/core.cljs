@@ -29,6 +29,7 @@
 ;             [:div.tl-cont-52c3f (:job-desc job)]
 ;             [:div.tl-date-4d0bc (:span job)]]])]])
 
+;; TODO: turn job-desc into list in config and here
 (hiccups/defhtml experience []
   [:div.exp-d625a 
     [:div.prof-title-2f701 
