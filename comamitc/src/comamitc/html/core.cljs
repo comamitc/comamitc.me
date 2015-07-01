@@ -16,18 +16,18 @@
       [:div.location-a36e7 
         [:i.fa.fa-map-marker.marker-cd4ad] [:span.city-07ffa "Houston, TX"]]]])
 
-(hiccups/defhtml resume-content []
-  [:div#bodyContent.wrapper-a0def 
-      [:div.timeline-f87c7 
-        (for [job career] ;; TODO: make sure career is sorted
-          [:div.timeline-block-2024c
-          [:div.timeline-img-9cc5f]
-          [:div {:class (if (odd? (:id job)) "timeline-content-b1670" "timeline-content-cd817")}
-            [:div.tl-title-7c942 
-              [:a {:href (:link job)} (:company job)] 
-              [:span.job-title-720f9 (:job-title job)]]
-            [:div.tl-cont-52c3f (:job-desc job)]
-            [:div.tl-date-4d0bc (:span job)]]])]])
+; (hiccups/defhtml resume-content []
+;   [:div#bodyContent.wrapper-a0def 
+;       [:div.timeline-f87c7 
+;         (for [job career] ;; TODO: make sure career is sorted
+;           [:div.timeline-block-2024c
+;           [:div.timeline-img-9cc5f]
+;           [:div {:class (if (odd? (:id job)) "timeline-content-b1670" "timeline-content-cd817")}
+;             [:div.tl-title-7c942 
+;               [:a {:href (:link job)} (:company job)] 
+;               [:span.job-title-720f9 (:job-title job)]]
+;             [:div.tl-cont-52c3f (:job-desc job)]
+;             [:div.tl-date-4d0bc (:span job)]]])]])
 
 (hiccups/defhtml experience []
   [:div.exp-d625a 
@@ -102,16 +102,16 @@
     [:div.header-right-591aa 
       (nav-list alt)]])
 
-(hiccups/defhtml nav-bar-2 [alt]
-  [:header#navBar.wrapper-a0def.header-7f1e8 
-    [:ul
-      [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
-      [:li.inline-list-b9fea.header-logo-318a9 
-        [:img {:src "images/texas-sil.png"
-               :alt "MFC"
-               :height "40px"}]]
-      [:li.inline-list-b9fea.header-link-318a9 
-        (nav-list alt)]]])
+; (hiccups/defhtml nav-bar-2 [alt]
+;   [:header#navBar.wrapper-a0def.header-7f1e8 
+;     [:ul
+;       [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
+;       [:li.inline-list-b9fea.header-logo-318a9 
+;         [:img {:src "images/texas-sil.png"
+;                :alt "MFC"
+;                :height "40px"}]]
+;       [:li.inline-list-b9fea.header-link-318a9 
+;         (nav-list alt)]]])
 
 (hiccups/defhtml footer []
   [:footer.bottom-c3612 
@@ -131,8 +131,8 @@
         [:div.license-5cb15 "All Rights Reserved Mitch Comardo © 2015"]]]]) 
 
 (def body-map
-  {:default home-content
-   :profile profile-content
+  {:default  home-content
+   :profile  profile-content
    :projects project-content})
 
 (hiccups/defhtml app [alt]
