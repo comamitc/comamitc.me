@@ -29,15 +29,57 @@
             [:div.tl-cont-52c3f (:job-desc job)]
             [:div.tl-date-4d0bc (:span job)]]])]])
 
+(hiccups/defhtml experience []
+  [:div.exp-d625a 
+    [:div.prof-title-2f701 
+      [:i.fa.fa-briefcase.space-right] "Experience"]])
+
+(hiccups/defhtml education []
+  [:div.edu-f0232
+    [:div.prof-title-2f701 
+     [:i.fa.fa-graduation-cap.space-right] "Education"]
+    [:div 
+      [:div.uni-6c2bd "University of Houston"]
+      [:div.degree-c86ab "B.B.A. Management"]
+      [:div.dates-053aa "2005 - 2010"]]])
+
+;fa-wrench
+(hiccups/defhtml skills []
+  [:div.skills-1c9f7 
+    [:div.prof-title-2f701 
+      [:i.fa.fa-wrench.space-right] "Skills"]])
+
+(hiccups/defhtml profile-content []
+  [:div#bodyContent.wrapper-a0def 
+      [:div.profile-e619f 
+        [:div.profile-left-44dfc
+          [:img.profile-pic-8ab09 {:src "images/mitch-2015.png"}]
+          (education)
+          (skills)]
+        [:div.profile-right-717af 
+          [:div.profile-about-58d23 
+            [:div.about-content-80f15 
+              [:p (str "Hi, I'm Mitch.  "
+                       "I'm a full stack web developer almost 10 years of experience "
+                       "who enjoys working on simple, intuitive user experiences and effecient "
+                       "code. I currently work at ") 
+                  [:a.generic-link-20b6e {:href "http://cmn.com"} "CMN"] 
+                  (str " where I develop dynamic applications for the web using"
+                       " NodeJS, MySQL, JavaScript, CSS3, and HTML5.")]
+              [:p (str "When I'm not at my day job, I enjoy traveling around the work with my wife,"
+                       " listening to music, working on side projects and driving my car.")]]]
+          (experience)]]])
+
+(hiccups/defhtml project-content []
+  [:div#bodyContent.wrapper-a0def 
+      "Projects"])
+
 (hiccups/defhtml nav-list [alt]
   [:ul
     [:li.nav-link-2c23a (when (= alt :profile) {:class "active-link-8157d"})
       [:a {:href "#/profile"} "profile"]]
     [:li.nav-link-2c23a (when (= alt :projects) {:class "active-link-8157d"})
-      [:a {:href "#/projects"} "projects"]]
-    ;[:li.nav-link-2c23a (when (= alt :resume) {:class "active-link-8157d"})
-    ;  [:a {:href "#/resume"} "resume"]]
-      ])
+      [:a {:href "#/projects"} "projects"]]])
 
 (hiccups/defhtml nav-bar [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
@@ -50,7 +92,7 @@
     [:div.header-right-591aa 
       (nav-list alt)]])
 
-(hiccups/defhtml nav-bar-2 [alt]
+(hiccups/defhtml nav-bar-alt [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
     [:ul
       [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
@@ -76,20 +118,16 @@
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]
       [:div.disclaimer-d553a 
-        [:div.license-5cb15 "All Rights Reserverd Mitch Comardo ©"]]]]) 
+        [:div.license-5cb15 "All Rights Reserved Mitch Comardo © 2015"]]]]) 
 
 (def body-map
   {:default home-content
-   :profile  resume-content})
-
-(def nav-map
-  {:default nav-bar
-   :profile  nav-bar-2})
-
+   :profile profile-content
+   :projects project-content})
 
 (hiccups/defhtml app [alt]
   [:div.body-c83c6
-    ((get nav-map alt) alt)
+    (nav-bar alt)
     ((get body-map alt))
     (footer)])
 

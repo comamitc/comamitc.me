@@ -15,6 +15,9 @@
 (defroute "/profile" []
   (html/render :profile))
 
+(defroute "/projects" []
+  (html/render :projects))
+
 (defroute "*" []
   (utils/log "this page does not exist"))
 
