@@ -29,7 +29,6 @@
 ;             [:div.tl-cont-52c3f (:job-desc job)]
 ;             [:div.tl-date-4d0bc (:span job)]]])]])
 
-;; TODO: turn job-desc into list in config and here
 (hiccups/defhtml experience []
   [:div.exp-d625a 
     [:div.prof-title-2f701 
@@ -87,7 +86,11 @@
 
 (hiccups/defhtml project-content []
   [:div#bodyContent.wrapper-a0def 
-      "Projects"])
+    [:div.projects-92dca
+      [:div.project-a8584 ]
+      [:div.project-a8584 ]
+      [:div.project-a8584 ]
+      [:div.project-a8584 ]]])
 
 (hiccups/defhtml nav-list [alt]
   [:ul

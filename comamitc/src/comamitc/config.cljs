@@ -45,3 +45,8 @@
                    "Microsoft SQL Server"
                    "Oracle"
                    "PostgreSQL"]))
+
+(def projects [{:name "pretty-print.net"
+                :desc "foo"
+                :date "1/1/2015"
+                :img  "images/pp-net.png"}])
