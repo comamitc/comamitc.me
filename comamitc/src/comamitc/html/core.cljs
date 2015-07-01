@@ -69,7 +69,7 @@
             [:div.about-content-80f15 
               [:p (str "Hi, I'm Mitch.  "
                        "I'm a full-stack engineer with almost 10 years of experience "
-                       "who enjoys working on simple, intuitive user experiences and effecient "
+                       "who enjoys working on simple, intuitive user experiences and efficient "
                        "code. I currently work at ") 
                   [:a.generic-link-20b6e {:href "http://cmn.com"} "CMN"] 
                   (str " where I develop dynamic applications for the web using"
