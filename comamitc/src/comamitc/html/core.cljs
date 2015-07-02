@@ -3,7 +3,7 @@
   (:require 
     [comamitc.dom :as dom]
     [comamitc.utils :as utils]
-    [comamitc.config :refer [career skills]]
+    [comamitc.config :refer [career skills projects]]
     [hiccups.runtime :as hiccupsrt]))
 
 (hiccups/defhtml home-content []
@@ -64,7 +64,7 @@
   [:div#bodyContent.wrapper-a0def 
       [:div.profile-e619f 
         [:div.profile-left-44dfc
-          [:img.profile-pic-8ab09 {:src "images/mitch-2015.png"}]]
+          [:img.profile-pic-8ab09 {:src "images/mitch-2015-2.png"}]]
         [:div.profile-right-717af 
           [:div.profile-about-58d23 
             [:div.about-content-80f15 
@@ -87,10 +87,18 @@
 (hiccups/defhtml project-content []
   [:div#bodyContent.wrapper-a0def 
     [:div.projects-92dca
-      [:div.project-a8584 ]
-      [:div.project-a8584 ]
-      [:div.project-a8584 ]
-      [:div.project-a8584 ]]])
+      (for [proj projects]
+        [:div.project-a8584 
+          [:img.proj-img-037f6  {:src (:img proj)}]
+          [:div.proj-title-78cce (:name proj) 
+            [:span.right-0258c (:date proj)]]
+          [:div.proj-desc-78cce (:desc proj)
+            [:div.proj-links-6d319
+              [:div.right-ac7f2 
+                (when-let [site (:site proj)]
+                  [:a {:href site} [:i.fa.fa-link.proj-link-c7825]])
+                (when-let [github (:github proj)]
+                  [:a {:href github} [:i.fa.fa-github-alt.proj-link-c7825]])]]]])]])
 
 (hiccups/defhtml nav-list [alt]
   [:ul

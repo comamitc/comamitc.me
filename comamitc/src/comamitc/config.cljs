@@ -46,7 +46,19 @@
                    "Oracle"
                    "PostgreSQL"]))
 
-(def projects [{:name "pretty-print.net"
-                :desc "foo"
-                :date "1/1/2015"
-                :img  "images/pp-net.png"}])
+(def projects [{:name   "pretty-print.net"
+                :desc   "EDN and Clojure code pretty printer"
+                :date   "2015"
+                :img    "images/pp-net2.png"
+                :site   "http://pretty-print.com"
+                :github "https://github.com/comamitc/pretty-print.net"}
+               {:name   "clj-beautify"
+                :desc   "clojure.tools.reader for preserving comments and macros"
+                :date   "2015"
+                :img    "images/github2.png"
+                :github "https://github.com/comamitc/clj-beautify"}
+               {:name   "cuttle"
+                :desc   "User Interface for the ClojureScript Compiler"
+                :date   "2015"
+                :img    "images/cuttle2.png"
+                :github "https://github.com/oakmac/cuttle"}])
