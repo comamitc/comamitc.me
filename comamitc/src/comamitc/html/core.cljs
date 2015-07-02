@@ -75,7 +75,7 @@
                   [:a.generic-link-20b6e {:href "http://cmn.com"} "CMN"] 
                   (str " where I develop dynamic applications for the web using"
                        " NodeJS, MySQL, JavaScript, CSS3, and HTML5.")]
-              [:p (str "When I'm not at my day job, I enjoy traveling around the work with my wife,"
+              [:p (str "When I'm not at my day job, I enjoy traveling around the world with my wife,"
                        " listening to music, working on side projects and driving my car.")]]]]]
       [:div.profile-e619f
         [:div.profile-left-44dfc
