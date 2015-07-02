@@ -136,11 +136,11 @@
         [:li.footer-link-b3f79 
           [:a {:href "mailto:comamitc@gmail.com"} [:i.fa.fa-envelope]]]
         [:li.footer-link-b3f79 
-          [:a {:href "http://facebook.com/comamitc"} &#xf09a;]]
+          [:a {:href "http://facebook.com/comamitc"} [:i.fa.fa-facebook]]]
         [:li.footer-link-b3f79 
-          [:a {:href "http://twitter.com/comamitc"} &#xf099;]]
+          [:a {:href "http://twitter.com/comamitc"} [:i.fa.fa-twitter]]]
         [:li.footer-link-b3f79 
-          [:a {:href "http://linkedin.com/in/mitchcomardo"} &#xf0e1;]]
+          [:a {:href "http://linkedin.com/in/mitchcomardo"} [:i.fa.fa-linkedin]]]
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]
       [:div.disclaimer-d553a 
