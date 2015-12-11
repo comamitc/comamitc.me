@@ -2,3 +2,13 @@ node_modules
 public/css/main.min.css
 public/js/comamitc.js
 public/js/comamitc.min.js
+
+pom.xml
+*jar
+/lib/
+/classes/
+/out/
+/target/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/

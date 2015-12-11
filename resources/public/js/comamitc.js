@@ -1,0 +1,12 @@
+goog.addDependency("base.js", ['goog'], []);
+goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.object', 'goog.string.StringBuffer', 'goog.array']);
+goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
+goog.addDependency("../hiccups/runtime.js", ['hiccups.runtime'], ['cljs.core', 'clojure.string']);
+goog.addDependency("../comamitc/config.js", ['comamitc.config'], ['cljs.core']);
+goog.addDependency("../comamitc/dom.js", ['comamitc.dom'], ['goog.dom', 'cljs.core']);
+goog.addDependency("../comamitc/utils.js", ['comamitc.utils'], ['cljs.core']);
+goog.addDependency("../comamitc/html/core.js", ['comamitc.html.core'], ['hiccups.runtime', 'cljs.core', 'comamitc.config', 'comamitc.dom', 'comamitc.utils']);
+goog.addDependency("../clojure/walk.js", ['clojure.walk'], ['cljs.core']);
+goog.addDependency("../secretary/core.js", ['secretary.core'], ['cljs.core', 'clojure.string', 'clojure.walk']);
+goog.addDependency("../comamitc/router.js", ['comamitc.router'], ['comamitc.html.core', 'cljs.core', 'goog.history.EventType', 'goog.History', 'secretary.core', 'comamitc.utils', 'goog.events']);
+goog.addDependency("../comamitc/core.js", ['comamitc.core'], ['cljs.core', 'comamitc.router']);
