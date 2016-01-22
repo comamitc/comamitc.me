@@ -105,7 +105,9 @@
     [:li.nav-link-2c23a (when (= alt :profile) {:class "active-link-8157d"})
       [:a {:href "#/profile"} "profile"]]
     [:li.nav-link-2c23a (when (= alt :projects) {:class "active-link-8157d"})
-      [:a {:href "#/projects"} "projects"]]])
+      [:a {:href "#/projects"} "projects"]]
+    [:li.nav-link-2c23a 
+      [:a {:href "https://comamitc.me/blog"} "blog"]]])
 
 (hiccups/defhtml nav-bar [alt]
   [:header#navBar.wrapper-a0def.header-7f1e8 
