@@ -120,17 +120,6 @@
     [:div.header-right-591aa 
       (nav-list alt)]])
 
-; (hiccups/defhtml nav-bar-2 [alt]
-;   [:header#navBar.wrapper-a0def.header-7f1e8 
-;     [:ul
-;       [:li.inline-list-b9fea.header-title-318a9 "Mitch Comardo"]
-;       [:li.inline-list-b9fea.header-logo-318a9 
-;         [:img {:src "images/texas-sil.png"
-;                :alt "MFC"
-;                :height "40px"}]]
-;       [:li.inline-list-b9fea.header-link-318a9 
-;         (nav-list alt)]]])
-
 (hiccups/defhtml footer []
   [:footer.bottom-c3612 
     [:div.wrapper-a0def.footer-center-b2a7f 
@@ -146,7 +135,7 @@
         [:li.footer-link-b3f79 
           [:a {:href "http://github.com/comamitc"} [:i.fa.fa-github-alt]]]]
       [:div.disclaimer-d553a 
-        [:div.license-5cb15 "All Rights Reserved Mitch Comardo © 2015"]]]]) 
+        [:div.license-5cb15 "All Rights Reserved Mitch Comardo © 2015-2016"]]]]) 
 
 (def body-map
   {:default  home-content
