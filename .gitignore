@@ -1,3 +1,13 @@
+pom.xml
+*jar
+/lib/
+/classes/
+/out/
+/target/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+
 node_modules
 public/css/main.min.css
 public/js/comamitc.js

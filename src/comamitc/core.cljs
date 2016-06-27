@@ -4,4 +4,5 @@
 
 (enable-console-print!)
 
-(router/init)
+(defn ^:export init []
+  (router/init))
